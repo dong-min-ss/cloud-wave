@@ -1,0 +1,10 @@
+Host bastion
+    HostName 13.209.18.27
+    User ec2-user
+    IdentityFile ~/.ssh/lab-edu-key-ec2.pem
+
+Host web-server
+    HostName 10.0.40.183
+    User ec2-user
+    IdentityFile ~/.ssh/lab-edu-key-ec2.pem
+    ProxyJump bastion
